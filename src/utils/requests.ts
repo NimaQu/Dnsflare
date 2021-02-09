@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const AxiosClient = axios.create({
-    baseURL: '/api',
+    baseURL: 'https://proxypass-cf-api.cloudflare-api.workers.dev',
     timeout: 15000,
 })
 
