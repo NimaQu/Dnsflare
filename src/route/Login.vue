@@ -25,7 +25,7 @@
                 <el-input v-model="model.email" />
             </el-form-item>
             <el-form-item
-                label="全局 Token"
+                label="全局 API Key"
                 prop="globalToken"
             >
                 <el-input v-model="model.globalToken" />
@@ -80,7 +80,7 @@
                 >
               </li>
               <li>
-                在 API Keys 一栏中点击查看 Global API Key，复制后填入全局 Token
+                在 API Keys 一栏中点击查看 Global API Key，复制后填入全局 API Key
                 一栏中，邮箱为 Global API Key 对应邮箱地址
               </li>
             </ol>
