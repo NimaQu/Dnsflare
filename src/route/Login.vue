@@ -47,6 +47,49 @@
                 </el-button>
             </el-form-item>
         </el-form>
+
+    <el-collapse v-model="help" accordion>
+      <el-collapse-item title="使用教程" name="1">
+        <el-tabs v-model="help" @tab-click="handleClick">
+          <el-tab-pane>
+            <span slot="label">API Token 登录</span>
+            <ol>
+              <li>
+                打开<a href="https://dash.cloudflare.com/profile/api-tokens"
+                  >Cloudflare 的 API Token 设定</a
+                >
+              </li>
+              <li>
+                在 API Tokens 一栏中选择 Create Token, 拉到最下面选择 Create
+                Custom Token，给予以下权限
+              </li>
+              <ul>
+                <li>Zone.DNS 写权限 (用于写入 DNS 记录)</li>
+                <li>Zone.Zone 读权限 (用于读取域名列表)</li>
+              </ul>
+              <li>填入到 Token 一栏中点击登录</li>
+            </ol>
+            <img src="/token.png">
+          </el-tab-pane>
+          <el-tab-pane>
+            <span slot="label">Global API Key 登录</span>
+            <ol>
+              <li>
+                打开<a href="https://dash.cloudflare.com/profile/api-tokens"
+                  >Cloudflare 的 API Token 设定</a
+                >
+              </li>
+              <li>
+                在 API Keys 一栏中点击查看 Global API Key，复制后填入全局 Token
+                一栏中，邮箱为 Global API Key 对应邮箱地址
+              </li>
+            </ol>
+            <img src="/global_api.png">
+          </el-tab-pane>
+        </el-tabs>
+      </el-collapse-item>
+    </el-collapse>
+
     </el-card>
 </template>
 
